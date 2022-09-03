@@ -130,3 +130,18 @@ small{
     text-align: center;
     font-size: 13px;
 }
+.chek{
+    color: green;
+    background-color: var(--bg);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    align-self: flex-start;
+}
+::-webkit-input-placeholder{
+    color: var(--itembg);
+}
+::-ms-check{
+    color: green;
+    background-color: var(--bg);
+}

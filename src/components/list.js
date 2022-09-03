@@ -12,6 +12,7 @@ function List(props){
     }
     return(
         <div className="list">
+            <input type="checkbox" className="chek"/>
             <div className="time"><li>{props.value}</li><Time date={props.time}/></div>
             <div className="btn">
                 <button onClick={edit}>Edit</button>

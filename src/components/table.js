@@ -1,7 +1,8 @@
 import List from "./list";
-// import React from "react";
+import React, { useState } from "react";
 function Table(props){
     const list=props.items;
+    const [catgory,setCatgory]=useState([])
     const edit=(ind)=>
     {
         const colist=list[ind]
