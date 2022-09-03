@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg:#14213d;
+    --itembg:#fca311;
+    --itemfor:#14213d;
+    --btnbg:#ffffff;
+    --btnfor:#000000;
+}
+body{
+    background-color: var(--bg);
+}
+.main{
+    /* width: 500px; */
+    background-color:var(--bg);
+    display: flex inline;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    /* height:max-content; */
+    font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.main h1{
+    padding-top: 50px;
+    text-align: center;
+    color: var(--itembg);
+}
+.inform{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;    
+}
+input{
+    background-color: var(--itemfor);
+    width:300px;
+    height: 50px;
+    border-radius:9mm ;
+    border: none;
+    font-size: 30px;
+    color: var(--itembg);
+}
+input[placeholder]{
+    padding-left:30px ;
+}
+.inform button{
+    background-color:var(--itembg);
+    width:50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    color:var(--itemfor);
+    border-radius: 50%;
+    border: none;
+}
+.table{
+    overflow: auto;
+    width: 400px;
+    display: flex inline;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height:490px ;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 1px 0px 5px 0px var(--itembg);
+    border-radius: 5mm;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 5mm;
+    background-color: var(--itembg);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--itemfor);
+}
+.list{
+    background-color:var(--itembg);
+    color: var(--itemfor);
+    display: flex inline;
+    width: 343px;
+    border-radius: 1mm;
+    padding:10px;
+    margin: auto;
+    margin-top: 10px;
+    height: 100px;
+}
+.list div{
+    margin: 10px;
+}
+.list li{
+    width: 80px;
+    text-align: left;
+    list-style: none;
+    font-size: 20px;
+}
+
+.time{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
+}
+.btn button{
+    color: var(--btnfor);
+    background-color: var(--btnbg);
+    width: 80px;
+    height: 30px;
+    border-radius: 5mm;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+}
+
+.list button:hover{
+    background-color: var(--bg);
+    transition:ease-in;
+    color: var(--itembg);
+}
+small{
+    color: var(--itemfor);
+    text-align: center;
+    font-size: 13px;
+}
