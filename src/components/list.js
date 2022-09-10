@@ -10,9 +10,12 @@ function List(props){
     {
         props.onEdit(get);
     }
+    const check=(e)=>{
+        props.onCheck(e.target.checked,get)
+    }
     return(
         <div className="list">
-            <input type="checkbox" className="chek"/>
+            <div className="chek"><label>Done</label><input type="checkbox" onClick={check}/></div>
             <div className="time"><li>{props.value}</li><Time date={props.time}/></div>
             <div className="btn">
                 <button onClick={edit}>Edit</button>

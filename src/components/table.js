@@ -2,7 +2,7 @@ import List from "./list";
 import React, { useState } from "react";
 function Table(props){
     const list=props.items;
-    const [catgory,setCatgory]=useState([])
+    const [done,setDone]=useState([])
     const edit=(ind)=>
     {
         const colist=list[ind]
@@ -11,15 +11,37 @@ function Table(props){
     const del=(ind)=>{
         props.onDel(ind)
     }
-    const itemList=[]
+    const itemList=[];
+    function check(bul,ind)
+    {
+        if(bul)
+        {
+            setDone(done.concat(itemList[ind]));
+            del(ind);
+        }
+    }
+    // const itemList=[]
     list.map((item,index)=>{
-        return itemList.push(<List key={item.id} value={item.value} onGet={index} onDel={del} onEdit={edit} time={item.id}/>)
+        return itemList.push(<List key={item.id} value={item.value} onGet={index} onDel={del} onEdit={edit} time={item.id} onCheck={check}/>)
     }
     )
+    // function check(bul,ind)
+    // {
+    //     if(bul)
+    //     {
+    //         setDone(done.push(itemList[ind]));
+    //         itemList.splice(ind,1);
+    //     }
+    // }
+    const recent=itemList.length!==0?<div className="container"><div className="recent">Recent</div><div className="clear">clear</div></div>:"";
+    const donn=done.length!==0?<div className="container"><button className="done">Done</button><button className="clear">clear</button></div>:"";
     return(
         <div className='table'>
             <ul>
+                {recent}
                 {itemList}
+                {donn}
+                {done}
             </ul>
 	    </div>
     )
