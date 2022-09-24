@@ -33,8 +33,8 @@ function Table(props){
     //         itemList.splice(ind,1);
     //     }
     // }
-    const recent=itemList.length!==0?<div className="container"><div className="recent">Recent</div><div className="clear">clear</div></div>:"";
-    const donn=done.length!==0?<div className="container"><button className="done">Done</button><button className="clear">clear</button></div>:"";
+    const recent=itemList.length!==0?<div className="containerDone"><button className="recent">Recent</button><button className="clear">clear</button></div>:"";
+    const donn=done.length!==0?<div className="containerDone"><button className="done">Done</button><button className="clear">clear</button></div>:"";
     return(
         <div className='table'>
             <ul>

@@ -15,7 +15,7 @@ function List(props){
     }
     return(
         <div className="list">
-            <div className="chek"><label>Done</label><input type="checkbox" onClick={check}/></div>
+            <div className="chek"><button>Done</button></div>
             <div className="time"><li>{props.value}</li><Time date={props.time}/></div>
             <div className="btn">
                 <button onClick={edit}>Edit</button>

@@ -81,6 +81,7 @@ input[placeholder]{
     background-color: var(--itemfor);
 }
 .list{
+    overflow: auto;
     background-color:var(--itembg);
     color: var(--itemfor);
     display: flex inline;
@@ -89,9 +90,10 @@ input[placeholder]{
     margin-top: 10px;
     height: 100px;
 }
-.list div{
+/* .list div{
     margin: 4px;
-}
+
+} */
 .list li{
     width: 80px;
     text-align: left;
@@ -101,23 +103,22 @@ input[placeholder]{
 
 .time{
     display: flex;
+    margin-right:5px;
     justify-content: space-between;
 }
 .btn{
     display: flex;
     justify-content: space-between;
-    /* margin-bottom: 10px; */
+    margin-bottom: 10px;
 }
 .btn button{
     color: var(--btnfor);
-    background-color: var(--btnbg);
-    width: 80px;
-    height: 30px;
+    width: 65px;
+    height: 20px;
     border-radius: 5mm;
     text-align: center;
-    font-size: 20px;
+    margin: 10px;
     border: none;
-    /* margin-top: 4px; */
 }
 
 .list button:hover{
@@ -138,22 +139,25 @@ small{
 ::-webkit-input-placeholder{
     color: var(--itembg);
 }
-.chek input{
-    width: 15px;
-    height: 15px;
+.chek button{
+    width: 50px;
+    height: 20px;
+    border: none;
+    border-radius: 5mm;
     margin: 5px;
 }
 .recent{
     text-align: center;
     border-radius: 5mm;
     width: 100px;
+    margin-top: 10px;
     height: 25px;
     color: var(--bg);
     background-color: var(--itembg);
 }
 .containerDone{
-    display: flex inline;
-    /* align-items: center; */
+    display: flex;
+    width: 343px;
     justify-content:space-between;
 }
 .done
