@@ -9,7 +9,8 @@ class Main extends React.Component{
         this.handleValue=this.handleValue.bind(this);
         this.handleSubmit=this.handleSubmit.bind(this);
         this.del=this.del.bind(this);
-		this.edit=this.edit.bind(this)
+		    this.edit=this.edit.bind(this)
+        this.clear=this.clear.bind(this)
     }
     handleValue(text)
     {
@@ -42,13 +43,20 @@ class Main extends React.Component{
 		this.setState({value:text});
 		this.setState({items:this.state.items})
 	}
+  clear(bool)
+  {
+    this.setState(state=>({
+      items:state.splice(0),
+      value:''
+    }))
+  }
   render(){
     const arrs=this.state.items
     return (
       <div className='main'>
         <h1>ToDo</h1>
         <Form  value={this.state.value} onHandleValue={this.handleValue} onHandleSubmit={this.handleSubmit}/>
-        <Table items={arrs} onDel={this.del} onEdit={this.edit}/>
+        <Table items={arrs} onDel={this.del} onEdit={this.edit} onClear={this.clear}/>
       </div>
     )
   }

@@ -11,6 +11,9 @@ function Table(props){
     const del=(ind)=>{
         props.onDel(ind)
     }
+    const clear=()=>{
+        props.onClear(true);
+    }
     const itemList=[];
     function check(bul,ind)
     {
@@ -33,7 +36,7 @@ function Table(props){
     //         itemList.splice(ind,1);
     //     }
     // }
-    const recent=itemList.length!==0?<div className="containerDone"><button className="recent">Recent</button><button className="clear">clear</button></div>:"";
+    const recent=itemList.length!==0?<div className="containerDone"><button className="recent">Recent</button><button className="clear" onClear={clear}>clear</button></div>:"";
     const donn=done.length!==0?<div className="containerDone"><button className="done">Done</button><button className="clear">clear</button></div>:"";
     return(
         <div className='table'>
