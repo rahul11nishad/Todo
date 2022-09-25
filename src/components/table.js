@@ -15,17 +15,18 @@ function Table(props){
         props.onClear(true);
     }
     const itemList=[];
-    function check(bul,ind)
+    function donee(ind)
     {
-        if(bul)
-        {
-            setDone(done.concat(itemList[ind]));
-            del(ind);
-        }
+        setDone(done.concat(itemList[ind]));
+        // del(ind);
     }
+    const doneClear=()=>{
+        setDone([]);
+    }
+
     // const itemList=[]
     list.map((item,index)=>{
-        return itemList.push(<List key={item.id} value={item.value} onGet={index} onDel={del} onEdit={edit} time={item.id} onCheck={check}/>)
+        return itemList.push(<List key={item.id} value={item.value} onGet={index} onDel={del} onEdit={edit} time={item.id} onDone={donee}/>)
     }
     )
     // function check(bul,ind)
@@ -36,8 +37,8 @@ function Table(props){
     //         itemList.splice(ind,1);
     //     }
     // }
-    const recent=itemList.length!==0?<div className="containerDone"><button className="recent">Recent</button><button className="clear" onClear={clear}>clear</button></div>:"";
-    const donn=done.length!==0?<div className="containerDone"><button className="done">Done</button><button className="clear">clear</button></div>:"";
+    const recent=itemList.length!==0?<div className="containerDone"><button className="recent">Recent</button><button className="clear" onClick={clear}>clear</button></div>:"";
+    const donn=done.length!==0?<div className="containerDone"><button className="done">Done</button><button className="clear" onClick={doneClear}>clear</button></div>:"";
     return(
         <div className='table'>
             <ul>

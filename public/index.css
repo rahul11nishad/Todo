@@ -52,7 +52,7 @@ input[placeholder]{
     height: 50px;
     font-size: 30px;
     text-align: center;
-    color:var(--itemfor);
+    color:var(--itemfor);  
     border-radius: 50%;
     border: none;
 }
@@ -95,23 +95,34 @@ input[placeholder]{
 
 } */
 .list li{
+    margin: 15px;
     width: 80px;
     text-align: left;
     list-style: none;
     font-size: 20px;
 }
 
-.time{
+/* .time{
     display: flex;
     margin-right:5px;
     justify-content: space-between;
-}
+} */
 .btn{
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
-.btn button{
+.btn button {
+    color: var(--btnfor);
+    width: 65px;
+    height: 20px;
+    border-radius: 5mm;
+    text-align: center;
+    margin: 10px;
+    border: none;
+}
+.time{
+    background-color: var(--btnbg);
     color: var(--btnfor);
     width: 65px;
     height: 20px;
@@ -121,6 +132,10 @@ input[placeholder]{
     border: none;
 }
 
+/* .time:hover{
+    background-color: var(--bg);
+    color: var(--itembg);
+} */
 .list button:hover{
     background-color: var(--bg);
     transition:ease-in;

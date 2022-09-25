@@ -45,10 +45,13 @@ class Main extends React.Component{
 	}
   clear(bool)
   {
-    this.setState(state=>({
-      items:state.splice(0),
-      value:''
-    }))
+    if(bool)
+    {
+      this.setState(state=>({
+        items:[],
+        // value:''
+      }))
+    }
   }
   render(){
     const arrs=this.state.items

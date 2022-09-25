@@ -2,6 +2,10 @@ import React from "react";
 import Time from "./time";
 function List(props){
     const get=props.onGet;
+    // const clear=()=>
+    // {
+    //     props.onClear(true);
+    // }
     const del=()=>
     {
         props.onDel(get);
@@ -10,15 +14,17 @@ function List(props){
     {
         props.onEdit(get);
     }
-    const check=(e)=>{
-        props.onCheck(e.target.checked,get)
+    const donee=()=>{
+        props.onDone(get)
     }
     return(
         <div className="list">
-            <div className="chek"><button>Done</button></div>
-            <div className="time"><li>{props.value}</li><Time date={props.time}/></div>
+            {/* <div className="chek"></div> */}
+            <div><li>{props.value}</li></div>
             <div className="btn">
                 <button onClick={edit}>Edit</button>
+                <button><Time date={props.time}/></button>
+                <button onClick={donee}>Done</button>
                 <button onClick={del}>Delete</button>
             </div>
         </div>
