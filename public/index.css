@@ -83,7 +83,7 @@ input[placeholder]{
 .list{
     overflow: auto;
     background-color:var(--itembg);
-    color: var(--itemfor);
+    color:var(--itemfor);
     display: flex inline;
     width: 343px;
     border-radius: 1mm;

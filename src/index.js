@@ -9,6 +9,7 @@ class Main extends React.Component{
         this.handleValue=this.handleValue.bind(this);
         this.handleSubmit=this.handleSubmit.bind(this);
         this.del=this.del.bind(this);
+        this.done=this.done.bind(this);
 		    this.edit=this.edit.bind(this)
         this.clear=this.clear.bind(this)
     }
@@ -37,6 +38,11 @@ class Main extends React.Component{
 		this.state.items.splice(ind,1)
 		this.setState({items:this.state.items})
     }
+    done(ind)
+    {
+		this.state.items.splice(ind,1)
+		this.setState({items:this.state.items})
+    }
 	edit(text,ind)
 	{
 		this.state.items.splice(ind,1)
@@ -59,7 +65,7 @@ class Main extends React.Component{
       <div className='main'>
         <h1>ToDo</h1>
         <Form  value={this.state.value} onHandleValue={this.handleValue} onHandleSubmit={this.handleSubmit}/>
-        <Table items={arrs} onDel={this.del} onEdit={this.edit} onClear={this.clear}/>
+        <Table items={arrs} onDel={this.del} onEdit={this.edit} onDone={this.done} onClear={this.clear}/>
       </div>
     )
   }
